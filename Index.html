@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Scottish Tragedy</title>
+  <script defer src="./Macbeth.js" charset="utf-8"></script>
+  <script src="Macbeth.json" charset="utf-8"></script>
+  <!--Calls the chart js library-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment@0.1.1"></script>
+  <style>
+  /*Sets custom font to use*/
+  @font-face { font-family: Blood; src: url('./PaintDropsRegular-0WaJo.ttf'); }
+  body {
+    text-align:center;
+    background-color:rgb(8,8,8);
+    color:rgb(163,	51,	61);
+  }
+  table {
+  margin-left: auto;
+  margin-right: auto;
+  color:rgb(200, 200, 200);
+  width:40%;
+}
+/*Specify the size of the chart*/
+#container{
+  width:100%;
+  height:500px;
+}
+button {
+  background-color:rgb(8,8,8);
+  color:rgb(163,	51,	61);
+  border-color:rgb(163,	51,	61);
+}
+td {text-align: left;
+  width: 50%;}
+h1 {font-size:40px;}
+h1, h2, h3 {font-family: Blood;}
+  </style>
+</head>
+<body onload="chart(0);">
+  <h1>The Scottish Tragedy</h1>
+  <!-- Each button calls the chart function but with different inputs to call the specific chart-->
+  <button onclick="chart(0)">Speaking Time</button>
+  <button onclick="chart(1)">Most Frequent Words</button>
+  <button onclick="chart(2)">Act Analysis</button>
+  <button onclick="chart(3)">Scene Length</button>
+  <div id="container">
+    <canvas id="myChart"></canvas>
+  </div>
+  <h1>The Script</h1>
+  <!--The script div will be filled in js-->
+  <div id="script"></div>
+</body>
+</html>
